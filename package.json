@@ -12,10 +12,6 @@
     "compress:css": "node-sass css/styles.prefix.css css/styles.css --output-style compressed",
     "build:css": "npm-run-all compile:sass prefix:css compress:css"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/m90khan/ChuckSum---Lorem-Ipsum-Generator.git"
-  },
   "author": "KhanX",
   "license": "ISC",
   "dependencies": {},
