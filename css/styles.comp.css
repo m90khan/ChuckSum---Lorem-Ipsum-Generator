@@ -65,7 +65,7 @@ a {
   text-decoration: none; }
 
 ::selection {
-  background-color: #ffb142;
+  background-color: #aa1a3e;
   color: #fff; }
 
 .opening {
@@ -145,7 +145,7 @@ a {
   margin-top: 4rem !important; }
 
 h1, h2, h3, h4, h5 {
-  font-family: "Lato", sans-serif;
+  font-family: "Rowdies", sans-serif;
   font-weight: 400; }
 
 li,
@@ -153,7 +153,7 @@ button,
 label,
 input,
 p {
-  font-family: "Rubik", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 100; }
 
 h1 {
@@ -181,14 +181,12 @@ p {
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
-  padding: 1.5rem 6rem;
   display: inline-block;
-  border-radius: 10rem;
   transition: all 0.2s;
   position: relative;
   font-size: 1.8rem;
-  border: none;
-  cursor: pointer; }
+  cursor: pointer;
+  overflow: hidden; }
 
 .btn:active, .btn:focus {
   outline: none;
@@ -196,43 +194,45 @@ p {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
 .btn:hover {
-  transform: translateY(-3px);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
   .btn:hover::after {
-    transform: scaleX(1.4) scaleY(1.6);
-    opacity: 0; }
+    transform: translateY(0%); }
 
 .btn::after {
-  content: " ";
-  padding: 1.5rem 6rem;
+  content: "Yes, Do it";
   display: inline-block;
-  border-radius: 10rem;
   position: absolute;
   font-size: 1.8rem;
   height: 100%;
   width: 100%;
   top: 0;
   left: 0;
-  z-index: -1;
+  border: none;
+  transform: translateY(100%);
   transition: all 0.2s; }
 
 .btn--primary {
-  background-color: #fff;
-  color: #777; }
+  background-color: #aa1a3e;
+  color: #fff;
+  padding: 2rem 2rem;
+  font-weight: 400;
+  border: none; }
   .btn--primary::after {
-    background-color: #fff; }
+    background-color: #fff;
+    padding: 2rem 2rem;
+    color: #aa1a3e; }
 
 .btn--secondary {
-  background-color: #ffb142;
-  color: #faf9f9; }
+  background-color: #aa1a3e;
+  color: #fffafa; }
   .btn--secondary::after {
-    background-color: #ffb142; }
+    background-color: #aa1a3e; }
 
 .btn-text, .btn-text:link, .btn-text:visited {
   text-transform: uppercase;
   text-decoration: none;
-  color: #ffb142;
-  border-left: 2px solid #ffb142;
+  color: #aa1a3e;
+  border-left: 2px solid #aa1a3e;
   padding: 1rem;
   display: inline-block;
   transition: all 0.2s;
@@ -263,50 +263,138 @@ p {
   left: 0;
   transition: all 0.5s;
   transform: translateX(-100%);
-  background: #ffb142;
+  background: #aa1a3e;
   z-index: -1; }
 
-.starter {
-  min-height: 100vh;
-  margin: auto;
+.header {
+  color: #fff;
+  min-height: 70vh;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  background: #ffb142;
-  color: #fff; }
-  .starter .logo {
-    background: #f0eeee;
-    color: #000;
+  padding: 4rem;
+  position: relative; }
+  .header__image {
+    flex: 1 1 40%;
+    min-height: 70vh;
+    position: relative; }
+    .header__image-sliders {
+      height: 80vh;
+      position: absolute;
+      top: 10%;
+      left: -10%;
+      width: 80%;
+      overflow: hidden;
+      box-shadow: 0 1rem 10rem black; }
+      .header__image-sliders img {
+        position: absolute;
+        height: 120%;
+        width: 100%;
+        object-fit: cover;
+        top: 0;
+        left: 0;
+        transform-origin: 100% 100%; }
+  .header__text {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 4rem;
-    border-radius: 1rem;
-    animation: tofro 4s ease-in-out infinite alternate; }
-    .starter .logo h2 {
-      background: linear-gradient(-45deg, #ffb142 0% 50%, #000 50% 100%);
-      color: transparent;
-      -webkit-background-clip: text;
-      background-clip: text; }
-    .starter .logo img {
-      animation: rotate360 5s ease-in-out infinite; }
+    justify-content: space-between;
+    align-items: flex-start;
+    min-height: 70vh;
+    flex: 1 1 50%;
+    z-index: 20; }
+    .header__text-credit {
+      align-self: flex-start;
+      opacity: 0.8;
+      padding-left: 10rem;
+      font-size: 2rem; }
+      .header__text-credit a {
+        text-decoration: line-through;
+        color: #fff; }
+        .header__text-credit a :hover {
+          text-decoration: none; }
+    .header__text-heading {
+      font-size: 15rem;
+      transform: translateX(10%); }
+    .header__text-subheading {
+      font-family: "Roboto", sans-serif;
+      font-weight: 500;
+      opacity: 0.6;
+      align-self: center; }
 
-@keyframes tofro {
-  0% {
-    transform: translateX(-10%); }
-  50% {
-    opacity: 1;
-    transform: translateX(10%); }
-  100% {
-    opacity: 1;
-    transform: translateX(0%) scale(1.5); } }
+.input {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  background: #fffbfb;
+  color: #777;
+  z-index: 5;
+  width: 90%;
+  transform: translate(20%, 110%);
+  box-shadow: 0 1rem 10rem black; }
+  .input__text {
+    font-weight: 300;
+    font-size: 2.5rem;
+    text-align: center; }
+    .input__text input {
+      width: 8%;
+      margin: 0 0.5rem;
+      padding: 1rem 1rem;
+      font-size: 2rem;
+      border: 1px solid #777; }
+  .input button {
+    margin-left: auto; }
 
-@keyframes rotate360 {
-  from {
-    transform: rotate(0deg); }
-  to {
-    transform: rotate(-360deg); } }
+.container {
+  min-height: 100vh; }
+
+.section-header {
+  min-height: 80vh; }
+
+.section-text {
+  min-height: 100vh;
+  width: 80%;
+  margin: auto; }
+
+.text {
+  min-height: 100vh;
+  padding: 10rem 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center; }
+  .text p {
+    padding: 1.5rem;
+    width: 100%;
+    font-size: 2.5rem; }
+
+.chuck-hero {
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  min-height: 70vh;
+  background-image: linear-gradient(242deg, #9c0d68 16%, #eea031 65%); }
+
+.chuck-hero--two {
+  background-image: linear-gradient(242deg, #244766 16%, #20dfd5 67%);
+  opacity: 0; }
+
+.chuck-hero--three {
+  background-image: linear-gradient(242deg, #0066cc 18%, #3ec8f1 67%);
+  opacity: 0; }
+
+.chuck-img-1 {
+  z-index: 10; }
+
+.chuck-img-2 {
+  z-index: 5; }
+
+.chuck-img-3 {
+  z-index: 1; }
 
 /* */
