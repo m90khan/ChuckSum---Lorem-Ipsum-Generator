@@ -299,6 +299,8 @@ p {
       .header__text-credit a {
         text-decoration: line-through;
         color: #fff; }
+        .header__text-credit a :hover {
+          text-decoration: none; }
     .header__text-heading {
       font-size: 15rem;
       transform: translateX(-20%); }
