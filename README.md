@@ -13,7 +13,7 @@
 
 **ChuckSum Overview**
 
-![ChuckSum Overview GIF](./img/checksum.gif)
+![ChuckSum Overview GIF](https://github.com/m90khan/ChuckSum---Lorem-Ipsum-Generator/blob/master/img/chucksum.gif)
 
 ---
 
