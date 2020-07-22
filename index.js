@@ -1,10 +1,9 @@
-const chuckApi1 = "http://api.icndb.com/jokes/random";
-
 const textDiv = document.querySelector(".text");
 const searchInput = document.querySelector(".input__value");
 const genBtn = document.querySelector(".generate");
 
 let searchValue = 5;
+const chuckApi = `http://api.icndb.com/jokes/random/${searchValue}/?escape=javascript`;
 
 // Event Listener
 searchInput.addEventListener("input", (e) => {
@@ -13,11 +12,11 @@ searchInput.addEventListener("input", (e) => {
 genBtn.addEventListener("click", (e) => {
   e.preventDefault();
 
-  chuckMe(searchValue);
+  chuckMe(chuckApi);
 });
 
-async function chuckMe(query) {
-  const chuckData = await fetch(`http://api.icndb.com/jokes/random/${query}`, {
+async function chuckMe(url) {
+  const chuckData = await fetch(url, {
     //method tell us what we want to do with the data
     method: "GET",
     headers: {

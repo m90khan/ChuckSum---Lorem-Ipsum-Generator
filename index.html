@@ -27,7 +27,23 @@
       <div class="section-header">
         <div class="header">
           <div class="header__image">
-            <img src="./img/chuck-1.jpg" alt="" />
+            <div class="header__image-sliders">
+              <img
+                src="./img/chuck-1.jpg"
+                class="cchuck-img-1"
+                alt="I am chuck norris Image"
+              />
+              <img
+                src="./img/chuck-2.jpg"
+                class="chuck-img-2"
+                alt="work is ready for chuck norris"
+              />
+              <img
+                src="./img/chuck-3.jpg"
+                class="chuck-img-3"
+                alt="leg day skip chuck norris"
+              />
+            </div>
           </div>
           <div class="header__text">
             <p class="header__text-credit">
@@ -44,11 +60,13 @@
                 <input type="text" placeholder="5" class="input__value" />
                 Jokes of Chuckness
               </p>
-              <button type="submit" class="btn btn--primary generate">
+              <button class="btn btn--primary generate">
                 Generate Chuck!
               </button>
             </div>
           </div>
+          <div class="chuck-hero chuck-hero--two"></div>
+          <div class="chuck-hero chuck-hero--three"></div>
         </div>
       </div>
       <!--section Text-->
@@ -56,7 +74,13 @@
         <div class="text"></div>
       </div>
     </div>
-
+    <!--Scripts-->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.1/gsap.min.js"
+      integrity="sha512-FOw+bgWRx/Kk1SAVkNO8CiXx9FFP7kFq+hcYWruJRdqjhzB39Yt/CVFgcFIXfTH0+oSZNUMEQNq1XI9+nMAW0Q=="
+      crossorigin="anonymous"
+    ></script>
     <script src="index.js"></script>
+    <script src="animation.js"></script>
   </body>
 </html>
