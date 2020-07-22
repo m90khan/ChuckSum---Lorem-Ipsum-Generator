@@ -4,14 +4,12 @@
   &:visited {
     text-transform: uppercase;
     text-decoration: none;
-    padding: 1.5rem 6rem;
     display: inline-block;
-    border-radius: 10rem;
     transition: all 0.2s;
     position: relative;
     font-size: 1.8rem;
-    border: none;
     cursor: pointer;
+    overflow: hidden;
   }
   &:active,
   &:focus {
@@ -20,35 +18,37 @@
     box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
   }
   &:hover {
-    transform: translateY(-3px);
     box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
     &::after {
-      transform: scaleX(1.4) scaleY(1.6);
-      opacity: 0;
+      transform: translateY(0%);
     }
   }
 
   &::after {
-    content: " ";
-    padding: 1.5rem 6rem;
+    content: "Yes, Do it";
     display: inline-block;
-    border-radius: 10rem;
     position: absolute;
     font-size: 1.8rem;
     height: 100%;
     width: 100%;
     top: 0;
     left: 0;
-    z-index: -1;
+    border: none;
+    transform: translateY(100%);
     transition: all 0.2s;
   }
 
   //   btn--primary
   &--primary {
-    background-color: $color-white;
-    color: $color-grey-dark;
+    background-color: $color-primary;
+    color: $color-white;
+    padding: 2rem 2rem;
+    font-weight: 400;
+    border: none;
     &::after {
       background-color: $color-white;
+      padding: 2rem 2rem;
+      color: $color-primary;
     }
   }
   &--secondary {

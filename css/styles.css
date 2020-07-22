@@ -65,7 +65,7 @@ a {
   text-decoration: none; }
 
 ::selection {
-  background-color: #ffb142;
+  background-color: #ff3366;
   color: #fff; }
 
 .opening {
@@ -145,7 +145,7 @@ a {
   margin-top: 4rem !important; }
 
 h1, h2, h3, h4, h5 {
-  font-family: "Lato", sans-serif;
+  font-family: "Rowdies", sans-serif;
   font-weight: 400; }
 
 li,
@@ -153,7 +153,7 @@ button,
 label,
 input,
 p {
-  font-family: "Rubik", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 100; }
 
 h1 {
@@ -181,14 +181,12 @@ p {
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
-  padding: 1.5rem 6rem;
   display: inline-block;
-  border-radius: 10rem;
   transition: all 0.2s;
   position: relative;
   font-size: 1.8rem;
-  border: none;
-  cursor: pointer; }
+  cursor: pointer;
+  overflow: hidden; }
 
 .btn:active, .btn:focus {
   outline: none;
@@ -196,43 +194,45 @@ p {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
 .btn:hover {
-  transform: translateY(-3px);
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
   .btn:hover::after {
-    transform: scaleX(1.4) scaleY(1.6);
-    opacity: 0; }
+    transform: translateY(0%); }
 
 .btn::after {
-  content: " ";
-  padding: 1.5rem 6rem;
+  content: "Yes, Do it";
   display: inline-block;
-  border-radius: 10rem;
   position: absolute;
   font-size: 1.8rem;
   height: 100%;
   width: 100%;
   top: 0;
   left: 0;
-  z-index: -1;
+  border: none;
+  transform: translateY(100%);
   transition: all 0.2s; }
 
 .btn--primary {
-  background-color: #fff;
-  color: #777; }
+  background-color: #ff3366;
+  color: #fff;
+  padding: 2rem 2rem;
+  font-weight: 400;
+  border: none; }
   .btn--primary::after {
-    background-color: #fff; }
+    background-color: #fff;
+    padding: 2rem 2rem;
+    color: #ff3366; }
 
 .btn--secondary {
-  background-color: #ffb142;
-  color: #faf9f9; }
+  background-color: #ff3366;
+  color: #fffafa; }
   .btn--secondary::after {
-    background-color: #ffb142; }
+    background-color: #ff3366; }
 
 .btn-text, .btn-text:link, .btn-text:visited {
   text-transform: uppercase;
   text-decoration: none;
-  color: #ffb142;
-  border-left: 2px solid #ffb142;
+  color: #ff3366;
+  border-left: 2px solid #ff3366;
   padding: 1rem;
   display: inline-block;
   transition: all 0.2s;
@@ -263,7 +263,90 @@ p {
   left: 0;
   transition: all 0.5s;
   transform: translateX(-100%);
-  background: #ffb142;
+  background: #ff3366;
   z-index: -1; }
+
+.header {
+  color: #fff;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background: #ff3366;
+  padding: 4rem; }
+  .header__image {
+    flex: 1 1 40%;
+    height: 70vh;
+    align-self: flex-end;
+    position: relative; }
+    .header__image img {
+      height: 110%;
+      width: 80%;
+      object-fit: cover;
+      transform: translate(20%, 10%); }
+  .header__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    min-height: 70vh;
+    flex: 1 1 60%; }
+    .header__text-credit {
+      align-self: flex-end;
+      opacity: 0.8;
+      font-size: 2rem; }
+      .header__text-credit a {
+        text-decoration: line-through;
+        color: #fff; }
+    .header__text-heading {
+      font-size: 15rem;
+      transform: translateX(-20%); }
+    .header__text-subheading {
+      font-family: "Roboto", sans-serif;
+      font-weight: 500;
+      opacity: 0.6;
+      padding-left: 2rem; }
+
+.input {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  background: #fffbfb;
+  color: #777;
+  z-index: 5;
+  transform: translateX(-10%); }
+  .input__text {
+    font-weight: 300;
+    font-size: 2.5rem;
+    text-align: center; }
+    .input__text input {
+      width: 8%;
+      margin: 0 0.5rem;
+      padding: 1rem 1rem;
+      font-size: 2rem;
+      border: 1px solid #777; }
+
+.container {
+  min-height: 100vh; }
+
+.section-header {
+  min-height: 80vh; }
+
+.section-text {
+  min-height: 100vh;
+  width: 80%;
+  margin: auto; }
+
+.text {
+  min-height: 100vh;
+  padding: 10rem 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center; }
+  .text p {
+    padding: 3rem; }
 
 /* */
