@@ -13,6 +13,8 @@
 
 **ChuckSum Overview**
 
+Live: https://m90khan.github.io/ChuckSum---Lorem-Ipsum-Generator/
+
 ![ChuckSum Overview GIF](https://github.com/m90khan/ChuckSum---Lorem-Ipsum-Generator/blob/master/img/chucksum.gif)
 
 ---
