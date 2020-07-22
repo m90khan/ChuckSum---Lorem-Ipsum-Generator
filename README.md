@@ -17,7 +17,7 @@
 
 ---
 
-## Api Fetch (Optional)
+## Api Fetch
 
 ```javascript
 const chuckApi = `http://api.icndb.com/jokes/random/${searchValue}/?escape=javascript`;
@@ -47,6 +47,5 @@ Reach out to me at one of the following places!
 
 - Website : <a href="https://thewebsitekitchen.com" target="_blank">`thewebsitekitchen.com`</a>
 - Linkedin at <a href="https://de.linkedin.com/in/khanmohsinx" target="_blank">`@khanmohsinx`</a>
-- Insert more social links here.
 
 ---
