@@ -15,7 +15,7 @@
       height: 80vh;
       position: absolute;
       top: 10%;
-      left: 15%;
+      left: -10%;
       width: 80%;
       overflow: hidden;
       box-shadow: 0 1rem 10rem black;
@@ -35,10 +35,12 @@
   &__text {
     @include flex(column, space-between, flex-start);
     min-height: 70vh;
-    flex: 1 1 60%;
+    flex: 1 1 50%;
+    z-index: 20;
     &-credit {
-      align-self: flex-end;
+      align-self: flex-start;
       opacity: 0.8;
+      padding-left: 10rem;
       font-size: 2rem;
       a {
         text-decoration: line-through;
@@ -50,24 +52,24 @@
     }
     &-heading {
       font-size: 15rem;
-      transform: translateX(-20%);
+      transform: translateX(10%);
     }
     &-subheading {
       font-family: $font-secondary;
       font-weight: 500;
       opacity: 0.6;
-      padding-left: 2rem;
+      align-self: center;
     }
   }
 }
 
 .input {
-  @include flex(row, flex-start, center);
+  @include flex(row, flex-end, center);
   background: rgb(255, 251, 251);
   color: $color-grey-dark;
   z-index: 5;
   width: 90%;
-  transform: translate(-20%, 110%);
+  transform: translate(20%, 110%);
   box-shadow: 0 1rem 10rem black;
   &__text {
     font-weight: 300;
