@@ -24,7 +24,6 @@ async function chuckMe(url) {
     },
   });
   const data = await chuckData.json();
-  console.log(data);
   generateJokes(data);
 }
 
