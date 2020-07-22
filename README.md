@@ -13,7 +13,7 @@
 
 **ChuckSum Overview**
 
-![ChuckSum Overview GIF](./img/checksum.gif)
+<img src="./img/checksum.gif"/>
 
 ---
 
