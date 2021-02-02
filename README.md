@@ -9,7 +9,7 @@
   <h3 align="center">ChuckSum---WebApp  </h3>
 
   <p align="center">
-> A Lorem Ipsum Generator based on Chuck Norris Jokes
+A Lorem Ipsum Generator based on Chuck Norris Jokes
 <br />
     <a href="m90khan@gmail.com"><strong>Contact Me</strong></a>
     <br />
@@ -98,7 +98,7 @@ async function chuckMe(url) {
 
 [youtube]: https://www.youtube.com/channel/UC96rVfdTKsjZpREnH6CaCOw
 [twitter]: https://twitter.com/m90khan
-[linkedin]: www.linkedin.com/in/uxdkhan
+[linkedin]: https://www.linkedin.com/in/uxdkhan
 [instagram]: https://www.instagram.com/uxd.khan/
 [behance]: https://www.behance.net/Khan_Mohsin
 [dribble]: https://dribbble.com/uxdkhan
