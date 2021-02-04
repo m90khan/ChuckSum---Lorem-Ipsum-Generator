@@ -70,7 +70,6 @@ const chuckApi = `http://api.icndb.com/jokes/random/${searchValue}/?escape=javas
 
 async function chuckMe(url) {
   const chuckData = await fetch(url, {
-    //method tell us what we want to do with the data
     method: 'GET',
     headers: {
       Accept: 'application/json',
